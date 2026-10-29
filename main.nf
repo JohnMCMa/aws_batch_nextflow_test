@@ -1,10 +1,6 @@
 #!/usr/bin/env nextflow
 nextflow.enable.dsl=2
 
-params {
-    reads  : 's3://nextflow-demo-johnma-1/inputs/sample_data.fastq'
-    outdir  : 's3://nextflow-demo-johnma-1/results'}
-
 process FASTQC {
     container 'biocontainers/fastqc:v0.11.9_cv8'
      publishDir "${params.outdir}/fastqc", mode: 'copy'    
