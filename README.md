@@ -30,13 +30,11 @@ nextflow -version
 ```
 to 
 ```
-**export NXF_VER=24.04.4**
-sudo dnf install sudo dnf install java**-21-amazon-corretto.x86_64** -y
+export NXF_VER=24.04.4
+sudo dnf install sudo dnf install java-21-amazon-corretto.x86_64 -y
 curl -s https://get.nextflow.io | bash
 sudo mv nextflow /usr/local/bin/
 sudo chmod +x /usr/local/bin/nextflow
 nextflow -version
 ```
-
-(differences bolded)
 This ensures the Java and NextFlow installed are versions 21 and 24.04.4 respectively. Newer version of NextFlow would require Seqera Platform credentials to use certain AWS related functionalility and would not be able to run the pipeline verbatim.
