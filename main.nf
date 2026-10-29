@@ -37,4 +37,3 @@ workflow {
     fastqc_reports_ch = FASTQC(reads_ch)
     MULTIQC(fastqc_reports_ch.collect())
 }
-‍
